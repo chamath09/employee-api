@@ -14,7 +14,7 @@ dotenv.config();
 const app = express();
 app.use(
   cors({
-    origin: "https://employee-frontend-orcin.vercel.app",
+    origin: "https://employee-frontend-orcin.vercel.app/api",
     credentials: true,
   })
 );
