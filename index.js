@@ -12,7 +12,12 @@ import SettingRouter from './routes/setting.js';
 connectToDatabase();
 dotenv.config();
 const app = express();
-app.use(cors())
+app.use(
+  cors({
+    origin: "https://employee-frontend-orcin.vercel.app/login",
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 app.use(express.static('public/uploads'));
